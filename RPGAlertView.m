@@ -74,14 +74,14 @@
             RPGAlertView *comparingObject = (RPGAlertView*)inObject;
 
             // 1. Title
-            if (objectsAreEqual)
+            if (objectsAreEqual && self.title)
             {
                 if (![self.title isEqual:[comparingObject title]])
                     objectsAreEqual = NO;
             }
             
             // 2. Message
-            if (objectsAreEqual)
+            if (objectsAreEqual && self.message)
             {
                 if (![self.message isEqual:[comparingObject message]])
                     objectsAreEqual = NO;
